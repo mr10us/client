@@ -1,0 +1,21 @@
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 40px;
+    padding: 10px;
+    width: 100%;
+}
+.infoContainer h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.buy {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.buy button {
+    height: 40px;
+    border-radius: 25px;
+}

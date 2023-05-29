@@ -1,0 +1,15 @@
+.slider {
+    background-color: #fff;
+    position: absolute;
+    top: -80px;
+    max-width: 80%;
+    height: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 40px;
+    box-shadow: 0 0 15px black;
+}
+.slider a {
+    text-decoration: none;
+    pointer-events: none;
+}

@@ -1,0 +1,15 @@
+.itemsContainer {
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
+  /* gap: 60px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 7px solid green;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 50px 70px;
+  transform: translateY(-30%);
+  box-shadow: 0 10px 25px black;
+}

@@ -1,0 +1,8 @@
+.imgContainer {
+    padding: 10px;
+}
+.imgContainer img {
+    width: 400px;
+    height: 500px;
+    aspect-ratio: 1 1;
+}

@@ -1,0 +1,25 @@
+.card {
+  margin: 0 auto;
+  width: 200px;
+  height: 150px;
+  background-color: #fefefe;
+  pointer-events: all;
+}
+.card .image {
+  width: 60%;
+  height: 80%;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+.card p {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+.card:hover {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
