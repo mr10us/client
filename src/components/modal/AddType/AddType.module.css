@@ -1,0 +1,35 @@
+.container {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 4rem;
+    color: #008001;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+}
+.container form input {
+    width: 100%;
+}
+.container form button {
+    padding: 10px;
+}
+.container > button {
+    position: absolute;
+    font-size: 2rem;
+    border: none;
+    background-color: inherit;
+    color: black;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+}

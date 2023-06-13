@@ -9,13 +9,5 @@
 .infoContainer h1 {
     font-size: 3rem;
     text-transform: uppercase;
-}
-.buy {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.buy button {
-    height: 40px;
-    border-radius: 25px;
+    margin-top: 10px;
 }

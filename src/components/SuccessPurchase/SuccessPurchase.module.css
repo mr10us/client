@@ -1,0 +1,19 @@
+.success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    background-color: white;
+    border-radius: 15px;
+    border: 5px solid rgb(29, 181, 29);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.success h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+.success p {
+    font-size: 1rem;
+    text-align: center;
+}

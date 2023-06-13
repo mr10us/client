@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeaderText.module.css"
-import Button from "../Button"
+import Button from "../UI/Button"
 
 export default function HeaderText() {
   return (

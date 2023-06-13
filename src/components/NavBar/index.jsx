@@ -1,33 +1,51 @@
 import React from "react";
 import styles from "./NavBar.module.css";
-import NavButton from "../NavButton";
+import NavButton from "../UI/NavButton";
 import { NavLink } from "react-router-dom";
-import { LOGIN_ROUTE, SHOP_ROUTE } from "../../utils/consts";
+import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../../utils/consts";
 import { useSelector, useDispatch } from "react-redux";
 import { dropUser, selectUser } from "../../features/user/userSlice";
 
-const NavBar = ({ faded }) => {
-
+const NavBar = ({
+  faded,
+  showMain = true,
+  showAdmin = true,
+}) => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
   return (
     <nav
       className={`wrapper ${styles.navigation}`}
-      style={faded ? { opacity: 1, backgroundColor: "#008001" } : {}}
+      style={
+        faded
+          ? {
+              opacity: 1,
+              backgroundColor: "#008001",
+              boxShadow: "inset 0 0 10px black",
+            }
+          : {}
+      }
     >
-      <NavButton>
+      {showMain && (
         <NavLink
           style={{ textDecoration: "none", color: "inherit" }}
           to={SHOP_ROUTE}
         >
-          Головна
+          <NavButton>Головна</NavButton>
         </NavLink>
-      </NavButton>
+      )}
       {user.isAuth ? (
         <>
           <div>
-            <NavButton>Панель адміністратора</NavButton>
+            {showAdmin && (
+              <NavLink
+                style={{ textDecoration: "none", color: "inherit" }}
+                to={ADMIN_ROUTE}
+              >
+                <NavButton>Панель адміністратора</NavButton>
+              </NavLink>
+            )}
             <NavButton onClick={() => dispatch(dropUser())}>Вийти</NavButton>
           </div>
         </>

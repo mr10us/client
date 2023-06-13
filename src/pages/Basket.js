@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
+import NavBar from "../components/NavBar";
+import BasketContainer from "../components/BasketContainer";
 
 export default function Basket() {
+
   return (
-    <div>Basket</div>
-  )
+    <>
+      <NavBar faded={true}/>
+
+      <BasketContainer />
+    </>
+  );
 }

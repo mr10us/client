@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import AdminForm from "../components/AdminForm";
+import NavBar from "../components/NavBar";
 
 export default function Admin() {
   return (
-    <div>Admin</div>
-  )
+    <>
+      <NavBar faded={true} showAdmin={false} />
+      <AdminForm />
+    </>
+  );
 }

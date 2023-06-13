@@ -1,15 +1,40 @@
-.itemsContainer {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
-  /* gap: 60px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.wrapper {
   background-color: #fff;
   border-top: 7px solid green;
+  position: relative;
   max-width: 80%;
   margin: 0 auto;
   padding: 50px 70px;
-  transform: translateY(-30%);
+  border-radius: 10px;
   box-shadow: 0 10px 25px black;
+  margin-bottom: 200px;
+  transform: translateY(-100px);
 }
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+.pages {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.page {
+  background-color: rgb(29, 181, 29);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.currentPage {
+  background-color: rgb(25, 150, 25);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: default;
+}
+.page:hover {
+  background-color: rgb(25, 150, 25);
+}
+

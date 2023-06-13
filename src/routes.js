@@ -5,7 +5,8 @@ import Basket from "./pages/Basket"
 import ItemPage from "./pages/ItemPage"
 import Items from "./pages/Items"
 
-import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, SHOP_ROUTE } from "./utils/consts"
+import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, SHOP_ROUTE, SUCCESS_ROUTE } from "./utils/consts"
+import Success from "./pages/Success"
 
 export const authRoutes = [
     {
@@ -38,5 +39,9 @@ export const publicRoutes = [
     {
         path: SHOP_ROUTE + '/:type',
         Component: Items
+    },
+    {
+        path: SUCCESS_ROUTE,
+        Component: Success
     }
 ]

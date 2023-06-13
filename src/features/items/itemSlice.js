@@ -1,27 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {};
+const initialState = {
+  items: [],
+};
 
 export const itemSlice = createSlice({
   name: "items",
   initialState,
   reducers: {
-    fetchItems: (state, { payload }) => {
-      state.items = payload;
-    },
-    createItem: (state, { payload }) => {
-      state.items.push(payload);
+    addItem: (state, { payload }) => {
+      const isExists = state.items.find((item) => item.id === payload.id);
+      if (isExists) alert("Товар вже додано");
+      else state.items = [...state.items, payload];
     },
     dropItem: (state, { payload }) => {
-      const isExists = state.items.findIndex(
-        (item) => item?.id === payload?.id
-      );
-      if (isExists === -1) throw new Error("no such item");
-      else state.items.splice(isExists);
+      const itemId = payload;
+      state.items = state.items.filter((item) => item.id !== itemId);
+    },
+    dropState: (state) => {
+      state.items = [...initialState.items];
     },
   },
 });
 
-export const { fetchItems, createItem, dropItem } = itemSlice.actions;
+export const {
+  addItem,
+  dropItem,
+  dropState,
+} = itemSlice.actions;
+
+export const selectItems = (state) => state.items.items;
+
+export const selectItemsAmount = (state) => state.items.items.length;
+
+export const selectOneItem = (state, id) => {
+  const item = state.items.items.find((item) => item.id == id);
+  return item;
+};
 
 export default itemSlice.reducer;

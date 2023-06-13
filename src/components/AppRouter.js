@@ -7,7 +7,7 @@ export default function AppRouter() {
 
   return (
     <Routes>
-      {true &&
+      {true /* авторизация */ &&
         authRoutes.map(({ path, Component }) => (
           <Route key={path} path={path} element={<Component />} exact />
         ))}
